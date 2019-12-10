@@ -1,0 +1,55 @@
+table {
+  width: 294px;
+  margin: 50px auto;
+  background: #663399;
+  border: none;
+  border-radius: 10px;
+  padding: 0px 20px 20px;
+}
+
+.heading {
+  color: white;
+  font-size: 130%;
+  padding: 10px;
+  text-align: center;
+}
+
+#input, #answer, #error {
+  width: 235px;
+  height: 50px;
+  font-size: 210%;
+  text-align: right;
+  border: none;
+  padding: 5px;
+}
+
+#input {
+  border-radius: 5px 5px 0 0;
+  box-shadow: 2px 2px 2px black;
+  color: #1e1e1e;
+}
+
+#answer, #error {
+  border-radius: 0 0 5px 5px;
+  box-shadow: 2px 2px 2px black;
+}
+
+#error {
+  font-size: 16px;
+}
+
+input[type=button] {
+  height: 60px;
+  width: 60px;
+  font-size: 130%;
+  color: blue;
+  background: white;
+  margin: 1px;
+  border-radius: 8px;
+  border: none;
+}
+
+input[type=button]:hover {
+  background: #cbcbcb;
+  cursor: pointer;
+}
