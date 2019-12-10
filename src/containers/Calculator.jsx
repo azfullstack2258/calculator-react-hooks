@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import Button from '../components/Button';
+import Text from '../components/Text';
 import '../assets/style.css';
 
 const Calculator = () => {
@@ -62,37 +64,37 @@ const Calculator = () => {
         </tr>
 
         <tr>
-          <input type="text" id="input" value={inputVar} placeholder="0" readOnly />
-          {error === '' && <input type="text" id="answer" value={result} readOnly style={{ color: 'green' }} />}
-          {error !== '' && <input type="text" id="error" value={error} readOnly style={{ color: 'red' }} />}
+          <Text id="input" value={inputVar} placeholder="0" readOnly />
+          {error === '' && <Text id="answer" value={result} readOnly style={{ color: 'green' }} />}
+          {error !== '' && <Text id="error" value={error} readOnly style={{ color: 'red' }} />}
         </tr>
       </tr>
       {/* buttons section */}
       <tr>
         <td>
-          <input type="button" value=" CE " onClick={clearScreen()} style={{ color: 'white', background: 'red' }}/>
-          <input type="button" value=" &#247; " onClick={getOperand('/')} />
-          <input type="button" value=" x " onClick={getOperand('*')} />
-          <input type="button" value=" &#8592; " onClick={backspace} style={{ color: 'red' }} />
+          <Button value=" CE " onClick={clearScreen()} style={{ color: 'white', background: 'red' }}/>
+          <Button value=" &#247; " onClick={getOperand('/')} />
+          <Button value=" x " onClick={getOperand('*')} />
+          <Button value=" &#8592; " onClick={backspace} style={{ color: 'red' }} />
           <br/>
-          <input type="button" value=" 1 " onClick={getNumber(1)} />
-          <input type="button" value=" 2 " onClick={getNumber(2)} />
-          <input type="button" value=" 3 " onClick={getNumber(3)} />
-          <input type="button" value=" + " onClick={getOperand('+')} />
+          <Button value=" 1 " onClick={getNumber(1)} />
+          <Button value=" 2 " onClick={getNumber(2)} />
+          <Button value=" 3 " onClick={getNumber(3)} />
+          <Button value=" + " onClick={getOperand('+')} />
           <br />
-          <input type="button" value=" 4 " onClick={getNumber(4)} />
-          <input type="button" value=" 5 " onClick={getNumber(5)} />
-          <input type="button" value=" 6 " onClick={getNumber(6)} />
-          <input type="button" value=" - " onClick={getOperand('-')} />
+          <Button value=" 4 " onClick={getNumber(4)} />
+          <Button value=" 5 " onClick={getNumber(5)} />
+          <Button value=" 6 " onClick={getNumber(6)} />
+          <Button value=" - " onClick={getOperand('-')} />
           <br />
-          <input type="button" value=" 7 " onClick={getNumber(7)} />
-          <input type="button" value=" 8 " onClick={getNumber(8)} />
-          <input type="button" value=" 9 " onClick={getNumber(9)} />
-          <input type="button" value=" ( ) " onClick={brackets} />
+          <Button value=" 7 " onClick={getNumber(7)} />
+          <Button value=" 8 " onClick={getNumber(8)} />
+          <Button value=" 9 " onClick={getNumber(9)} />
+          <Button value=" ( ) " onClick={brackets} />
           <br />
-          <input type="button" value=" +/- " onClick={getOperand('+/-')} />
-          <input type="button" value=" 0 " onClick={getNumber(0)} />
-          <input type="button" value=" = " onClick={compute} style={{width: 120, color: 'white', background: 'green' }} />
+          <Button value=" +/- " onClick={getOperand('+/-')} />
+          <Button value=" 0 " onClick={getNumber(0)} />
+          <Button value=" = " onClick={compute} style={{width: 120, color: 'white', background: 'green' }} />
         </td>
       </tr>
     </table>
